@@ -1,0 +1,27 @@
+.Image.cir {
+    border-radius: 50%;
+    border: 2px solid white;
+    margin: 0 20px;
+}
+
+.Image.sqr {
+    border-radius: 10%;
+    border: 2px solid black;
+}
+
+.Image.lg {
+    height: 20vmin;
+    width: 20vmin;
+    min-height: 100px;
+    min-width: 100px;
+}
+
+.Image.md {
+    height: 60px;
+    margin: 10px 0;
+}
+
+.Image.sm {
+    height: 25px;
+    margin: 10px 0;
+}

@@ -1,0 +1,113 @@
+{
+    "profile": {
+        "name": "Brooke Norton",
+        "about": "Self-starting and detail-oriented front end engineer with a passion for creating impactful software and 5 years experience in developing web applications. Highly skilled in JavaScript, HTML, and CSS.",
+        "phone": "407-720-9802",
+        "email": "brookemorgannorton@gmail.com",
+        "city": "Orlando",
+        "state": "FL",
+        "locationURL": "https://goo.gl/maps/CvBZ2uT2riFZYePm7",
+        "imageURL": "https://i.ibb.co/f9LNYkg/pic-square-light.jpg"
+    },
+    "social": [
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/brookenorton/",
+            "imageURL": "https://i.ibb.co/HYWNDV2/linkedin.png"
+        },
+        {
+            "name": "GitHub",
+            "url": "https://github.com/nortonbrooke",
+            "imageURL": "https://i.ibb.co/tPt4pmN/github.png"
+        },
+        {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/brooke.m.norton.7/",
+            "imageURL": "https://i.ibb.co/DbxBwrs/facebook.png"
+        },
+        {
+            "name": "Instagram",
+            "url": "https://www.instagram.com/brookemnorton/",
+            "imageURL": "https://i.ibb.co/VmTyH6M/instagram.png"
+        }
+    ],
+    "portfolio": [
+        {
+            "name": "Spendoc",
+            "description": "Finance Visualization",
+            "imageURL": "https://i.ibb.co/GcFsTJ7/spendoc.jpg",
+            "url": "https://wwww.spendoc.com",
+            "startDate": "6/1/2019",
+            "endDate": "",
+            "online": false
+        },
+        {
+            "name": "Waidoe",
+            "description": "Place Generator",
+            "imageURL": "https://i.ibb.co/sKrNRLv/waidoe.jpg",
+            "url": "https://www.waidoe.com/",
+            "startDate": "2/18/2019",
+            "endDate": "4/2/2019",
+            "online": true
+        }
+    ],
+    "projects": [
+        {
+            "name": "Guard Tours - Senior Design Project",
+            "organization": "University of Central Florida ",
+            "department": "Department of Emergency & Security Management", 
+            "description": "Security Operations Web and Android Applications",
+            "url": "https://drive.google.com/file/d/1Rp3cMBf5EfNHQC_FqdWaInFolw7OCs3a/view?usp=sharing",
+            "imageURL": "https://i.ibb.co/1Thm0t3/guard-tours.png",
+            "startDate": "1/9/2017",
+            "endDate": "12/11/2017"
+        }
+    ],
+    "education": [
+        {
+            "certificate": "Bachelor of Science in Computer Science",
+            "school": "University of Central Florida",
+            "startDate": "8/12/2013",
+            "endDate": "12/18/2017",
+            "city": "Orlando",
+            "state": "FL",
+            "imageURL": "https://i.ibb.co/f41GzYm/ucf.png",
+            "url": "https://www.ucf.edu/"
+        }
+    ],
+    "experience": [
+        {
+            "title": "Front End Software Engineer",
+            "company": "SightPlan Inc.",
+            "description": "Multifamily Maintenance, Resident Service, Asset Management",
+            "startDate": "4/1/2019",
+            "endDate": "",
+            "city": "Orlando",
+            "state": "FL",
+            "url": "https://www.sightplan.com/",
+            "imageURL": "https://i.ibb.co/SN3bvMb/sightplan.png"
+        },
+        {
+            "title": "UI Software Engineer",
+            "company": "Corvana Corporation",
+            "description": "Business Intelligence",
+            "startDate": "8/1/2017",
+            "endDate": "2/17/2019",
+            "city": "Orlando",
+            "state": "FL",
+            "url": "https://www.corvana.com/",
+            "imageURL": "https://i.ibb.co/NxqtVCK/corvana.png"
+        },
+        {
+            "title": "Software Engineer",
+            "company": "Sonobi Inc.",
+            "description": "Advertising Technology",
+            "startDate": "2/16/2015",
+            "endDate": "8/1/2017",
+            "city": "Winter Park",
+            "state": "FL",
+            "url": "https://sonobi.com/",
+            "imageURL": "https://i.ibb.co/NxL43L1/sonobi.jpg"
+        }
+    ]
+}

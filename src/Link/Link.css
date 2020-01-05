@@ -1,0 +1,16 @@
+.Link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.Link[disabled] {
+  cursor: default;
+  pointer-events: none;
+}
+
+.App-header .Link {
+  margin-right: 10px;
+}

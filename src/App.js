@@ -39,13 +39,7 @@ class App extends React.Component {
               <div className="App-flex">
                 <Link url={`mailto:${state.data.profile.email}`}>
                   <span role="img" aria-label="Email outbox emoji">📤</span> Email
-              </Link>
-                <Link url={`tel:+1${state.data.profile.phone}`}>
-                  <span role="img" aria-label="Phone emoji">📲</span> Call
-              </Link>
-              <Link url={`sms:+1${state.data.profile.phone}`}>
-                <span role="img" aria-label="Speech bubble emoji">💬</span> Text
-              </Link>
+                </Link>
               </div>
               <div className="App-flex">
                 {state.data.social.map((item) => <Link url={item.url}>

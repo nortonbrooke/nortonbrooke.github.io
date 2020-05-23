@@ -1,61 +1,54 @@
 {
-    "profile": {
-        "name": "Brooke Norton",
-        "about": "Self-starting and detail-oriented front end engineer with a passion for creating impactful software and 5 years experience in developing web applications. Highly skilled in JavaScript, HTML, and CSS.",
-        "phone": "407-720-9802",
-        "email": "brookemorgannorton@gmail.com",
-        "city": "Colorado Springs",
-        "state": "CO",
-        "locationURL": "https://goo.gl/maps/2jaFEXQG8TwCFVYr5",
-        "imageURL": "https://i.ibb.co/XtWxV8W/IMG-1688.jpg"
-    },
-    "social": [
-        {
-            "name": "LinkedIn",
-            "url": "https://www.linkedin.com/in/brookenorton/",
-            "imageURL": "https://i.ibb.co/HYWNDV2/linkedin.png"
+    "name": "Brooke Norton",
+    "about": "Self-starting and detail-oriented with a passion for creating simplistic and impactful software. Over 5 years of experience in developing web applications. Highly skilled in JavaScript, HTML, and CSS.",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "imageURL": "https://i.ibb.co/XtWxV8W/IMG-1688.jpg",
+    "contact": {
+        "email": {
+            "id": "email",
+            "url": "mailto:brookemorgannorton@gmail.com"
         },
-        {
-            "name": "GitHub",
-            "url": "https://github.com/nortonbrooke",
-            "imageURL": "https://i.ibb.co/tPt4pmN/github.png"
+        "linkedIn": {
+            "id": "linkedIn",
+            "url": "https://www.linkedin.com/in/brookenorton/"
         },
-        {
-            "name": "Facebook",
-            "url": "https://www.facebook.com/brooke.m.norton.7/",
-            "imageURL": "https://i.ibb.co/DbxBwrs/facebook.png"
+        "github": {
+            "id": "gitHub",
+            "url": "https://github.com/nortonbrooke"
         },
-        {
-            "name": "Instagram",
-            "url": "https://www.instagram.com/brookemnorton/",
-            "imageURL": "https://i.ibb.co/VmTyH6M/instagram.png"
+        "facebook": {
+            "id": "facebook",
+            "url": "https://www.facebook.com/brooke.m.norton.7/"
+        },
+        "instagram": {
+            "id": "instagram",
+            "url": "https://www.instagram.com/brookemnorton/"
         }
-    ],
+    },
     "portfolio": [
         {
-            "name": "Spendoc",
-            "description": "Finance Visualization",
+            "name": "MoneyApp",
+            "description": "Web & Mobile Application",
             "imageURL": "https://i.ibb.co/GcFsTJ7/spendoc.jpg",
-            "url": "https://wwww.spendoc.com",
-            "startDate": "6/1/2019",
-            "endDate": "",
-            "online": false
+            "url": "",
+            "startDate": "1/16/2020",
+            "endDate": ""
         },
         {
-            "name": "Waidoe",
-            "description": "Place Generator",
+            "name": "Place Generator",
+            "description": "Web Application",
             "imageURL": "https://i.ibb.co/sKrNRLv/waidoe.jpg",
-            "url": "https://www.waidoe.com/",
+            "url": "https://www.placegenerator.com/",
             "startDate": "2/18/2019",
-            "endDate": "4/2/2019",
-            "online": true
+            "endDate": "5/2/2019"
         }
     ],
     "projects": [
         {
             "name": "Guard Tours - Senior Design Project",
             "organization": "University of Central Florida ",
-            "department": "Department of Emergency & Security Management", 
+            "department": "Department of Emergency & Security Management",
             "description": "Security Operations Web and Android Applications",
             "url": "https://drive.google.com/file/d/1Rp3cMBf5EfNHQC_FqdWaInFolw7OCs3a/view?usp=sharing",
             "imageURL": "https://i.ibb.co/1Thm0t3/guard-tours.png",
@@ -77,7 +70,7 @@
     ],
     "experience": [
         {
-            "title": "Front End Software Engineer",
+            "title": "Front End Software Engineer, Remote",
             "company": "SightPlan Inc.",
             "description": "Multifamily Maintenance, Resident Service, Asset Management",
             "startDate": "4/1/2019",
@@ -95,7 +88,7 @@
             "endDate": "2/17/2019",
             "city": "Orlando",
             "state": "FL",
-            "url": "https://www.corvana.com/",
+            "url": "",
             "imageURL": "https://i.ibb.co/NxqtVCK/corvana.png"
         },
         {
@@ -109,5 +102,15 @@
             "url": "https://sonobi.com/",
             "imageURL": "https://i.ibb.co/NxL43L1/sonobi.jpg"
         }
+    ],
+    "likes": [
+        "☕ Coffee",
+        "🍺 Beer",
+        "🌮 Mexican Food",
+        "💪 Exercising",
+        "🎭 Performing Arts",
+        "💃 Dancing",
+        "🗺️ Traveling",
+        "🎢 Theme Parks"
     ]
 }

@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-const DATE_FORMAT = 'MMM YYYY';
+const DATE_FORMAT = 'MMMM YYYY';
 
 export const formatDate = (date) => {
     return date ? moment(date).format(DATE_FORMAT) : 'Present';

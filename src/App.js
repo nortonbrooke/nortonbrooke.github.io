@@ -1,132 +1,70 @@
-import React from 'react';
-import { formatDate, getDuration } from './util';
-import Image from './Image';
-import Link from './Link';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import Body from "./Body";
+import Header from "./Header";
+import Menu from "./Menu";
+import Separator from "./Separator";
+import { Portfolio, Education, Experience, Likes } from "./sections";
 
-class App extends React.Component {
-  state = {
-    data: null
+import "./App.css";
+
+const HEADER_ANIMATION_DURATION = 1080;
+const BODY_ANIMATION_DURATION = 1600;
+
+function App() {
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(null);
+
+  const getData = async function () {
+    setLoading(true);
+    const response = await fetch("data.json");
+    const data = await response.json();
+    setData(data);
+    setLoading(false);
   };
 
-  componentDidMount() {
-    this.getData();
-  }
-
-  async getData() {
-    const response = await fetch('data.json');
-    const data = await response.json();
-    this.setState({ data });
-  }
-
-  render() {
-    const { state } = this;
-
-    if (!state.data) {
-      return <div />
+  useEffect(() => {
+    if (data === null) {
+      getData();
     }
+  });
 
-    return (
-      <div className="App">
-        <header className="App-header">
-          <Image src={state.data.profile.imageURL} size="large" shape="circle" label="Profile image" />
-          <div className="App-col">
-            <h2>{state.data.profile.name}</h2>
-            <div className="App-row">
-              <Link url={state.data.profile.locationURL}><span role="img" aria-label="Earth emoji">🌏</span> {state.data.profile.city}, {state.data.profile.state}</Link>
-            </div>
-            <div className="App-row">
-              <div className="App-flex">
-                <Link url={`mailto:${state.data.profile.email}`}>
-                  <span role="img" aria-label="Email outbox emoji">📤</span> Email
-                </Link>
-              </div>
-              <div className="App-flex">
-                {state.data.social.map((item) => <Link url={item.url}>
-                  <Image src={item.imageURL} desc={item.name} size="small" />
-                </Link>)}
-              </div>
-            </div>
-          </div>
-        </header>
-        <div className="App-body">
-          <h1>About</h1>
-          <div className="App-section">
-            <p>{state.data.profile.about}</p>
-          </div>
-          <h1>Portfolio</h1>
-          <div className="App-grid">
-            {state.data.portfolio.map((item) => <div className="App-col center" key={item.name}>
-              <Link url={item.url} disabled={!item.online}>
-                <Image src={item.imageURL} desc={item.name} size="large" shape="square" />
-                {!item.online && <div className="App-banner">Coming Soon</div>}
-              </Link>
-              <b>{item.name}</b>
-              <span>{item.description}</span>
-              <span>{formatDate(item.startDate)} - {formatDate(item.endDate)}</span>
-              <span>{getDuration(item.startDate, item.endDate)}</span>
-            </div>)}
-          </div>
-          <h1>Education</h1>
-          <div className="App-section">
-            {state.data.education.map((item) => <div className="App-row" key={item.certificate}>
-              <div className="App-col">
-                <b>{item.certificate}</b>
-                <span>{item.school}</span>
-                <span>{formatDate(item.startDate)} - {formatDate(item.endDate)}</span>
-                <span>{item.city}, {item.state}</span>
-              </div>
-              <Link url={item.url}>
-                <Image src={item.imageURL} desc={`${item.school} logo`} size="medium" />
-              </Link>
-            </div>)}
-          </div>
-          <h1>Experience</h1>
-          <div className="App-section">
-            {state.data.experience.map((item) => <div className="App-row" key={item.company}>
-              <div className="App-col">
-                <b>{item.title}</b>
-                <span>{item.company}</span>
-                <span>{formatDate(item.startDate)} - {formatDate(item.endDate)} · {getDuration(item.startDate, item.endDate)}</span>
-                <span>{item.city}, {item.state}</span>
-              </div>
-              <Link url={item.url}>
-                <Image src={item.imageURL} desc={`${item.company} logo`} size="small" />
-              </Link>
-            </div>)}
-          </div>
-          <h1>Projects</h1>
-          <div className="App-section">
-            {state.data.projects.map((item) => <div className="App-row" key={item.name}>
-              <div className="App-col">
-                <b>{item.name}</b>
-                <span>{item.description}</span>
-                <span>{item.organization}</span>
-                <span>{item.department}</span>
-                <span>{formatDate(item.startDate)} - {formatDate(item.endDate)} · {getDuration(item.startDate, item.endDate)}</span>
-              </div>
-              <Link url={item.url}>
-                <Image src={item.imageURL} desc={item.name} size="medium" />
-              </Link>
-            </div>)}
-          </div>
-          <h1>Things I Enjoy</h1>
-          <div className="App-section">
-            <div className="App-col">
-              <div><span role="img" aria-label="Coffee emoji">☕</span> Coffee</div>
-              <div><span role="img" aria-label="Beer emoji">🍺</span> Beer</div>
-              <div><span role="img" aria-label="Taco emoji">🌮</span> Mexican Food</div>
-              <div><span role="img" aria-label="Flexed bicep emoji">💪</span> Exercising</div>
-              <div><span role="img" aria-label="Tragedy and comedy masks emoji">🎭</span> Performing Arts</div>
-              <div><span role="img" aria-label="Woman dancing emoji">💃</span> Dancing</div>
-              <div><span role="img" aria-label="Roller coaster emoji">🎢</span> Theme Parks</div>
-              <div><span role="img" aria-label="Map emoji">🗺️</span> Traveling</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
+  if (loading) {
+    return null;
   }
+
+  const {
+    name,
+    city,
+    state,
+    contact,
+    portfolio,
+    education,
+    experience,
+    likes,
+  } = data;
+
+  return (
+    <div className="app">
+      <Menu
+        data={contact}
+        animationDelay={HEADER_ANIMATION_DURATION + BODY_ANIMATION_DURATION}
+      />
+      <div className="content">
+        <Header data={{ name, city, state }} />
+        <Separator animationDelay={HEADER_ANIMATION_DURATION} />
+        <Body animationDelay={HEADER_ANIMATION_DURATION}>
+          <Portfolio data={portfolio} />
+          <Education data={education} />
+          <Experience data={experience} />
+          <Likes data={likes} />
+        </Body>
+        <Separator
+          animationDelay={HEADER_ANIMATION_DURATION}
+          hideAnimationDelay={BODY_ANIMATION_DURATION}
+        />
+      </div>
+    </div>
+  );
 }
 
 export default App;

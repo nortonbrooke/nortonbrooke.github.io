@@ -1,15 +1,24 @@
-import React from 'react';
-import './Link.css';
+import React from "react";
+import "./Link.css";
 
 function Link(props) {
-    return (<a href={props.url} className="Link" disabled={props.disabled}>
+  if (props.url) {
+    return (
+      <a
+        href={props.url}
+        className="link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {props.children}
-    </a>);
+      </a>
+    );
+  }
+  return <div>{props.children}</div>;
 }
 
 Link.defaultProps = {
-    disabled: false,
-    url: ""
-}
+  url: "",
+};
 
 export default Link;

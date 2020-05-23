@@ -1,0 +1,9 @@
+.separator {
+  opacity: 0;
+  height: 0;
+  background: var(--secondary-color);
+  width: 100%;
+  margin: 0;
+  border: none;
+  transition: all 0.2s linear;
+}

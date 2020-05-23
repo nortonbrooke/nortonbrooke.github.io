@@ -1,0 +1,13 @@
+.body {
+  height: 0;
+  width: 100%;
+  transition: all 1.6s linear;
+  overflow: hidden;
+}
+
+/* Tablet and Desktop Styling */
+@media only screen and (min-device-width: 480px) {
+  .body {
+    width: 50%;
+  }
+}

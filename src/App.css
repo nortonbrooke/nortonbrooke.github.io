@@ -1,93 +1,19 @@
-.App {
-  background: white;
-  min-width: 300px;
+.app {
+  height: 100%;
+  font-size: var(--font-size-large);
 }
 
-.App-header {
-  height: 25vmin;
-  min-height: 145px;
-  display: flex;
-  align-items: center;
-  background: black;
-  color: white;
-}
-
-.App-body {
-  padding: 10px;
-}
-
-.App-banner {
-  position: absolute;
-  background: black;
-  width: 100%;
-  text-align: center;
-  padding: 4px 0;
-}
-
-/* Layout */
-.App-grid {
-  display: flex;
-  flex-flow: row nowrap;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  font-size: 0.9em;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.App-grid > * {
-  margin-right: 20px;
-  white-space: nowrap;
-}
-
-.App-grid .App-col {
-  flex: 0;
-}
-
-.App-section {
+.content {
   display: flex;
   flex-flow: column nowrap;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.App-section:last-child {
-  border: none;
-}
-
-.App-flex {
-  display: flex;
   align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
-.App-row {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.App-col {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-start;
-  flex: 1;
-}
-
-.App-col.center {
-  align-items: center;
-}
-
-.App-row:last-child,
-.App-col:last-child {
-  margin: 0;
-}
-
-/* Desktop */
-@media screen and (min-width: 900px) {
-  p {
-    max-width: 50%;
+/* Tablet and Desktop Styling */
+@media only screen and (min-device-width: 480px) {
+  .app {
+    font-size: var(--font-size-small);
   }
 }

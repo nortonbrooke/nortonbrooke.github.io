@@ -1,17 +1,83 @@
+:root {
+  /* Font Variables */
+  --font-size-small: 16px;
+  --font-size-large: 32px;
+  --main-font-family: 'Open Sans', sans-serif;
+  --code-font-family: 'Coda', cursive;
+
+  /* Color Variables */
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --primary-color: #14B9FF;
+  --secondary-color: #e6a565;
+
+  /* Miscellaneous Variables */
+  --icon-size: 2.6em;
+  --menu-right-offset: 2em;
+  --menu-offset: calc(var(--icon-size) + var(--menu-right-offset));
+}
+
+html, body, #root {
+  height: 100%;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  background: var(--background-color);
+  font-family: var(--main-font-family);
+  color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+h1 {
+  margin: 0;
+  padding: 0 10px;
+  font-size: 2em;
+  color: var(--primary-color);
+} 
 
 h2 {
+  font-size: 1.5em;
   margin: 0;
+  padding: 0 10px;
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 1.25em;
+  margin: 10px 0;
+  color: var(--secondary-color);
+}
+
+p {
+  padding: 0 10px;
+}
+
+section {
+  padding: 0 var(--menu-offset) 0 10px;
+}
+
+section > div {
+  padding-bottom: 20px;
+}
+
+section:last-child {
+  padding-bottom: calc(10px + env(safe-area-inset-bottom));
+}
+
+/* SVG Color Transformations */
+svg [fill="#000000"] {
+  fill: var(--secondary-color);
+}
+
+svg [fill="#ffffff"]{
+  fill: var(--background-color);
+}
+
+/* Tablet and Desktop Styling */
+@media only screen and (min-device-width: 480px) {
+  section {
+    padding-right: 10px;
+  }
 }

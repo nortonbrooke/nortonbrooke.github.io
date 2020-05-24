@@ -49,20 +49,18 @@ function App() {
         data={contact}
         animationDelay={HEADER_ANIMATION_DURATION + BODY_ANIMATION_DURATION}
       />
-      <div className="content">
-        <Header data={{ name, city, state }} />
-        <Separator animationDelay={HEADER_ANIMATION_DURATION} />
-        <Body animationDelay={HEADER_ANIMATION_DURATION}>
-          <Portfolio data={portfolio} />
-          <Education data={education} />
-          <Experience data={experience} />
-          <Likes data={likes} />
-        </Body>
-        <Separator
-          animationDelay={HEADER_ANIMATION_DURATION}
-          hideAnimationDelay={BODY_ANIMATION_DURATION}
-        />
-      </div>
+      <Header data={{ name, city, state }} />
+      <Separator animationDelay={HEADER_ANIMATION_DURATION} />
+      <Body animationDelay={HEADER_ANIMATION_DURATION}>
+        <Portfolio data={portfolio} />
+        <Education data={education} />
+        <Experience data={experience} />
+        <Likes data={likes} />
+      </Body>
+      <Separator
+        animationDelay={HEADER_ANIMATION_DURATION}
+        hideAnimationDelay={BODY_ANIMATION_DURATION}
+      />
     </div>
   );
 }
